@@ -11,7 +11,7 @@ module.exports.checkStock = async () => {
     const status = await performRequest(process.env.itemNumber);
 
     // if the ammo met our threshold, alert slack channel
-    if (status !== 'OUT_OF_STOCK') await alertConditionMet(process.env.itemNumber);
+    if (status === 'IN_STOCK') await alertConditionMet(process.env.itemNumber);
 
     else console.log(`The current status (${status}) does not meet the alert conditions`);
 
@@ -44,7 +44,7 @@ async function performRequest(itemNumber) {
     mode: 'cors'
   }).then(data => data.json());
 
-  return _.get(statusData, 'payload.buyBox.athenaAvailabilityStatus');
+  return _.get(statusData, 'payload.buyBox.athenaAvailabilityStatus', 'FAILED');
 }
 
 // report error to Slack

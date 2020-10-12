@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 
-const itemNumber = '14660327';
+const itemNumber = '14660316';
 
 (async () => {
   const res = await fetch('https://www.walmart.com/terra-firma/fetch?rgs=REVIEWS_FIELD,QUESTIONS_FIELD,CARE_PLANS_MAP,HOME_SERVICES_MAP,BUY_BOX_PRODUCT_IDML,CHECKOUT_COMMENTS_FIELD', {
