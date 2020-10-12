@@ -65,14 +65,14 @@ First, install the project's dependencies with:
 
 To test the lambda locally before deploying, invoke the function with:
 
-`serverless invoke local --function heartbeat`
+`serverless invoke local --function checkStock`
 
 <br>
 
 
 To test the live function after it has been deployed to AWS, invoke it with:
 
-`serverless invoke --function heartbeat`
+`serverless invoke --function checkStock`
 
 <br>
 

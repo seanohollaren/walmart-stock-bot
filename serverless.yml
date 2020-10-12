@@ -1,4 +1,4 @@
-service: ammo-bot
+service: walmart-stock-bot
 
 custom: ${file(config.yml)}
 
@@ -9,47 +9,13 @@ provider:
   # role: insertIAMRoleARNHere
 
 functions:
-  search9mm:
+  checkDumbbells:
     memorySize: 128
-    handler: handler.heartbeat
+    handler: handler.checkStock
     timeout: 60
     environment:
-      serviceEndpoint: ${self:custom.serviceEndpoint}
-      slackEndpoint: ${file(hooks.yml):slackEndpoint}
-      httpMethod: ${self:custom.httpMethod}
-      threshold: ${self:custom.threshold}
-      searchString: ${self:custom.9mmSearchString}
-      linkAndText: ${self:custom.9mmLinkAndText}
-      mentions: ${self:custom.9mmMentions}
+      slackEndpoint: ${file(hooks.yml):dumbbellSlackEndpoint}
+      itemNumber: ${self:custom.dumbbellItemNumber}
+      mentions: ${self:custom.dumbbellMentions}
     events:
       - schedule: ${self:custom.interval}
-
-  search40sw:
-    memorySize: 128
-    handler: handler.heartbeat
-    timeout: 60
-    environment:
-      serviceEndpoint: ${self:custom.serviceEndpoint}
-      slackEndpoint: ${file(hooks.yml):slackEndpoint}
-      httpMethod: ${self:custom.httpMethod}
-      threshold: ${self:custom.threshold}
-      searchString: ${self:custom.40swSearchString}
-      linkAndText: ${self:custom.40swLinkAndText}
-      mentions: ${self:custom.40swMentions}
-    events:
-      - schedule: ${self:custom.interval}
-
-  search45acp:
-    memorySize: 128
-    handler: handler.heartbeat
-    timeout: 60
-    environment:
-      serviceEndpoint: ${self:custom.serviceEndpoint}
-      slackEndpoint: ${file(hooks.yml):slackEndpoint}
-      httpMethod: ${self:custom.httpMethod}
-      threshold: ${self:custom.threshold}
-      searchString: ${self:custom.45acpSearchString}
-      linkAndText: ${self:custom.45acpLinkAndText}
-      mentions: ${self:custom.45acpMentions}
-    # events:
-    #   - schedule: ${self:custom.interval}
