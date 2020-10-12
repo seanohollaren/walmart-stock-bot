@@ -3,12 +3,12 @@ dumbbellItemNumber: 14660327
 dumbbellMentions: "<@U8UFH121F>"
 
 # Searching for PS5 Physical Edition
-ps5PhysicalItemNumber: "?"
-ps5PhysicalMentions: "<@U8UFKNFQ9>"
+ps5PhysicalItemNumber: 363472942
+ps5PhysicalMentions: "<@U8UFJ0GBT>"
 
 # Searching for PS5 Digital Edition
-ps5DigitalItemNumber: "?"
-ps5DigitalMentions: "<@U8UFKNFQ9>"
+ps5DigitalItemNumber: 363472942
+ps5DigitalMentions: "<@U8UFJ0GBT>"
 
 # Interval at which to perform heartbeat check
 interval: rate(1 minute)

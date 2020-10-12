@@ -19,3 +19,14 @@ functions:
       mentions: ${self:custom.dumbbellMentions}
     events:
       - schedule: ${self:custom.interval}
+
+  checkPs5:
+    memorySize: 128
+    handler: handler.checkStock
+    timeout: 60
+    environment:
+      slackEndpoint: ${file(hooks.yml):ps5SlackEndpoint}
+      itemNumber: ${self:custom.ps5PhysicalItemNumber}
+      mentions: ${self:custom.ps5PhysicalMentions}
+    events:
+      - schedule: ${self:custom.interval}

@@ -4,13 +4,16 @@
   "description": "A lambda which performs a request to a specified endpoint at a specified interval",
   "main": "handler.js",
   "scripts": {
-    "start": "serverless invoke local --function checkDumbbells"
+    "start": "serverless invoke local --function checkDumbbells",
+    "checkDumbbells": "node checkDumbbellsLocally.js",
+    "checkPs5": "node checkPS5Locally.js"
   },
   "author": "Sean O'Hollaren <sean.ohollaren@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.20",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "yaml": "^1.10.0"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
