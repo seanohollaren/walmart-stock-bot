@@ -1,11 +1,9 @@
 # Searching for dumbbells
 dumbbellItemNumber: 14660327
-# dumbbellMentions: "<@U8UFH121F>"
 dumbbellMentions: "<@U8UFJ0GBT> <@U8UFH121F>"
 
 # Searching for PS5 Physical Edition
 ps5PhysicalItemNumber: 363472942
-# ps5PhysicalItemNumber: 520468661
 ps5PhysicalMentions: "<!channel>"
 
 # Searching for PS5 Digital Edition
