@@ -6,7 +6,8 @@
   "scripts": {
     "start": "serverless invoke local --function checkDumbbells",
     "checkDumbbells": "node checkDumbbellsLocally.js",
-    "checkPs5": "node checkPS5Locally.js"
+    "checkPs5Physical": "node checkPS5PhysicalLocally.js",
+    "checkPs5Digital": "node checkPS5DigitalLocally.js"
   },
   "author": "Sean O'Hollaren <sean.ohollaren@gmail.com>",
   "license": "ISC",

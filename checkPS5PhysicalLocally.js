@@ -9,4 +9,4 @@ process.env.slackEndpoint = hooks.ps5SlackEndpoint;
 process.env.itemNumber = config.ps5PhysicalItemNumber;
 process.env.mentions = config.ps5PhysicalMentions;
 
-setInterval(handler.checkStock, 30000);
+setInterval(handler.checkStock, 35000);
